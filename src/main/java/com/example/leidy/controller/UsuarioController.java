@@ -8,6 +8,8 @@ import javafx.scene.control.TextField;
 public class UsuarioController {
 
     @FXML
+    public Label lblMensaje;
+    @FXML
     public TextField txtNombre;
     @FXML
     public TextField txtCorreo;

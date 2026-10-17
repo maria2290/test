@@ -4,17 +4,31 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.text.Text?>
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.leidy.controller.UsuarioController">
+    <Button onAction="#actualizarUsuario" text="Actualizar" />
+    <Button fx:id="btnEliminar" onAction="#eliminarUsuario" text="Eliminar" />
+    <TableView fx:id="tableUsuario" onMouseClicked="#handleSeleccionar" prefHeight="200.0" prefWidth="350.0">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="90.0" />
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="120.0" />
+            <TableColumn fx:id="colCorreo" text="Correo" prefWidth="135.0" />
+        </columns>
+    </TableView>
+    <Label fx:id="lblMensaje" text="Bienvenida" />
+  </VBox>
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-   <HBox prefHeight="100.0" prefWidth="200.0">
-    <TextField fx:id="txtNombre" />
-    <TextField fx:id="txtCorreo" />
-    <TextField fx:id="txtcontrasena" />
+   <VBox prefHeight="100.0" prefWidth="200.0">
+       <TextField fx:id="txtNombre" promptText="Nombre" />
+       <TextField fx:id="txtCorreo" promptText="Correo" />
+       <PasswordField fx:id="txtcontrasena" promptText="Contraseña" />
+       <TextField fx:id="txtDireccion" promptText="Dirección" />
+   </VBox>
 
-   </HBox>
-    <Label fx:id="welcomeText" />
-    <Button onAction="#onUsuarioButtonClick" text="Hello!" />
-</VBox>
+    <Button onAction="#onUsuarioButtonClick" text="!Bienvenido¡" />
+
+    <Label fx:id="welcomeText" text="apagar" />
+ </VBox>
