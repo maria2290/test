@@ -1,11 +1,11 @@
 package com.example.leidy.dto;
 
 public class Usuariodto {
-    private String nombre;
+    private  String  nombre;
     private String contrasena;
     private String correo;
-    private  String direccion;
-    private String   id ;
+    private String direccion;
+    private String id;
 
     public Usuariodto(String nombre, String contrasena, String correo, String direccion, String id) {
         this.nombre = nombre;
@@ -31,6 +31,10 @@ public class Usuariodto {
         this.contrasena = contrasena;
     }
 
+    public String getCorreo() {
+        return correo;
+    }
+
     public void setCorreo(String correo) {
         this.correo = correo;
     }
@@ -47,11 +51,20 @@ public class Usuariodto {
         return id;
     }
 
-
     public void setId(String id) {
         this.id = id;
     }
 
+    @Override
+    public String toString() {
+        return "Usuariodto{" +
+                "id='" + id + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", correo='" + correo + '\'' +
+                '}';
+    }
 }
+
+
 
 
