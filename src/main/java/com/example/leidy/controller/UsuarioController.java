@@ -21,13 +21,10 @@ public class UsuarioController {
     @FXML
     public TextField txtDireccion;
     public Button btnEliminar;
-
-    private final UsuarioModel usuarioModel = new UsuarioModel();
-    public TableView tableUsuario;
     public TableColumn colId;
     public TableColumn colNombre;
     public TableColumn colCorreo;
-    private Usuariodto usuarioSeleccionado = null;
+    public TableView tableUsuario;
 
 
     @FXML
@@ -37,6 +34,7 @@ public class UsuarioController {
 
     @FXML
     public void handleActualizarUsuario(ActionEvent actionEvent) {
+        /*
         if (usuarioSeleccionado != null) {
             usuarioSeleccionado.setNombre(txtNombre.getText());
             usuarioSeleccionado.setContrasena(txtcontrasena.getText());
@@ -50,11 +48,13 @@ public class UsuarioController {
         } else {
             lblMensaje.setText("Selecciona un usuario para actualizar.");
         }
+        */
     }
 
 
     @FXML
     public void handleEliminarUsuario(ActionEvent actionEvent) {
+        /*
         if (usuarioSeleccionado != null) {
             usuarioModel.eliminarUsuario(usuarioSeleccionado.getId());
             lblMensaje.setText("Usuario eliminado exitosamente.");
@@ -63,6 +63,7 @@ public class UsuarioController {
         } else {
             lblMensaje.setText("Selecciona un usuario para eliminar.");
         }
+         */
     }
 
 

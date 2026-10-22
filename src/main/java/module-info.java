@@ -6,7 +6,10 @@ module com.example.leidy {
     requires org.kordamp.bootstrapfx.core;
 
     opens com.example.leidy to javafx.fxml;
+    opens com.example.leidy.controller to javafx.fxml;
+
     exports com.example.leidy;
     exports com.example.leidy.controller;
-    opens com.example.leidy.controller to javafx.fxml;
+
+
 }
